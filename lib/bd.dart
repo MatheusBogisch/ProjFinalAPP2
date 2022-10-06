@@ -1,4 +1,4 @@
-import 'package:aula2809/consulta.dart';
+import 'package:boutiquedebolo/consulta.dart';
 import 'package:boutiquedebolo/pedido.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -21,12 +21,12 @@ void inserirBanco(String c, String p ,String r, String t, String o, String nC, S
 }
 
 pessoasNoBanco() async {
-  var response = await http.get(Uri.parse("http://localhost/flutter/pessoa.php"));
+  var response = await http.get(Uri.parse("http://localhost/flutter/pedido.php"));
   var dados = jsonDecode(response.body);
   List<Pedido> p = [];
   for (Map x in dados) {
-    var novoPedido = Pedido(x['nome'], x['cpf']);
-    p.add(novaPessoa);
+    var novoPedido = Pedido(x['cobertura'],x['preco'],x['recheio'], x['tamanho'], x['observacoes'], x['nomeCliente'], x['foneCliente'], x['imagem']);
+    p.add(novoPedido);
   }
   EstadoTelaCon.relacao = p;
 }
