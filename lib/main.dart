@@ -40,7 +40,14 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold( backgroundColor: Colors.pink[400],
-
+    body: GridView.count(
+          crossAxisCount: 1,
+          children: [
+            Image.asset("assets/images/logo.png"),
+        ],),
     );
+    
+
+    
   }
 }
