@@ -1,9 +1,11 @@
+import 'package:boutiquedebolo/bd.dart';
 import 'package:boutiquedebolo/botao.dart';
+import 'package:boutiquedebolo/consulta.dart';
 import 'package:boutiquedebolo/inicio.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp( Main());
+  runApp(Main());
 }
 
 class Main extends StatelessWidget {
@@ -36,6 +38,8 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    pessoasNoBanco();
+    print(EstadoTelaCon.relacao);
   }
 
   @override
@@ -51,7 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
               Botao(
                   nome: "BEM-VINDA",
                   apertar: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>MyApp()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => MyApp()));
                   }),
             ],
           )
