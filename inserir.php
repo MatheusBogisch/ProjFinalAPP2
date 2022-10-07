@@ -12,8 +12,8 @@ if(isset($_POST['recheio'])){
       $nomeCliente = $_POST['nomeCliente'];
       $foneCliente = $_POST['foneCliente'];
       $imagem = $_POST['imagem'];
-      $inserir = "INSERT INTO pedido (cobertura,preco, recheio, tamanho, observacoes, nomeCliente, foneCliente, imagem) VALUES 
-      ('$cobertura,$preco, $recheio','$tamanho', '$observacoes', '$nomeCliente', '$foneCliente', '$imagem')";
+      $inserir = "INSERT INTO pedido (cobertura, preco, recheio, tamanho, observacoes, nomeCliente, foneCliente, imagem) VALUES 
+      ('$cobertura','$preco', '$recheio','$tamanho', '$observacoes', '$nomeCliente', '$foneCliente', '$imagem')";
       $gravar = $conectar->prepare($inserir);
       $gravar->execute(array());
 }else{
