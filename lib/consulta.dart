@@ -27,17 +27,47 @@ class EstadoTelaCon extends State<TelaCon> {
       ),
       drawer: Drawer(
         child: Menu(),
-      ), 
+      ),
       body: Center(
           child: Column(children: [
         Row(children: [
           Container(
             color: Colors.grey,
-            child: Text("rotulo1"),
+            child: Text("Cobertura"),
             width: 200,
           ),
           Container(
-            child: Text("rotulo2"),
+            child: Text("Preço"),
+            color: Colors.grey,
+            width: 200,
+          ),
+          Container(
+            child: Text("Recheio"),
+            color: Colors.grey,
+            width: 200,
+          ),
+          Container(
+            child: Text("Tamanho"),
+            color: Colors.grey,
+            width: 200,
+          ),
+          Container(
+            child: Text("Observaçoes"),
+            color: Colors.grey,
+            width: 200,
+          ),
+          Container(
+            child: Text("Nome do cliente"),
+            color: Colors.grey,
+            width: 200,
+          ),
+          Container(
+            child: Text("Fone do cliente"),
+            color: Colors.grey,
+            width: 200,
+          ),
+          Container(
+            child: Text("Imagem"),
             color: Colors.grey,
             width: 200,
           )
@@ -47,11 +77,41 @@ class EstadoTelaCon extends State<TelaCon> {
             children: [
               Container(
                 color: Colors.grey,
-                child: Text(pessoa.getNome()),
+                child: Text(pedido.getCobertura()),
                 width: 200,
               ),
               Container(
-                child: Text(pessoa.getCpf()),
+                child: Text(pedido.getPreco()),
+                color: Colors.grey,
+                width: 200,
+              ),
+              Container(
+                child: Text(pedido.getRecheio()),
+                color: Colors.grey,
+                width: 200,
+              ),
+              Container(
+                child: Text(pedido.getTamanho()),
+                color: Colors.grey,
+                width: 200,
+              ),
+              Container(
+                child: Text(pedido.getObservacoes()),
+                color: Colors.grey,
+                width: 200,
+              ),
+              Container(
+                child: Text(pedido.getNomeCliente()),
+                color: Colors.grey,
+                width: 200,
+              ),
+              Container(
+                child: Text(pedido.getFoneCliente()),
+                color: Colors.grey,
+                width: 200,
+              ),
+              Container(
+                child: Text(pedido.getImagem()),
                 color: Colors.grey,
                 width: 200,
               ),

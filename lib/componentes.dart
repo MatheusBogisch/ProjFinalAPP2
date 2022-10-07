@@ -29,7 +29,7 @@ class Menu extends StatelessWidget {
             child: Text("Início"),
             onPressed: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => MyApp()));
+                  context, MaterialPageRoute(builder: (context) => Main()));
             }),
         TextButton(
             child: Text("Cadastrar"),
