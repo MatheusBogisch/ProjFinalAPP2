@@ -1,3 +1,4 @@
+import 'package:boutiquedebolo/componentes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -42,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        drawer: Drawer(backgroundColor: Colors.pink[400]),
+        drawer: Drawer(backgroundColor: Colors.pink[400] ,child: Menu()),
         body: GridView.count(
             crossAxisCount: 1,
             children: [Image.asset("assets/images/logo.png")]));

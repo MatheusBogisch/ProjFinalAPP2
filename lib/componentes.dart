@@ -1,5 +1,6 @@
 import 'package:boutiquedebolo/cadastro.dart';
 import 'package:boutiquedebolo/consulta.dart';
+import 'package:boutiquedebolo/inicio.dart';
 import 'package:boutiquedebolo/main.dart';
 import 'package:flutter/material.dart';
 
@@ -26,19 +27,19 @@ class Menu extends StatelessWidget {
     return Column(
       children: [
         TextButton(
-            child: Text("Início"),
+         child: Text("inicio" , style: TextStyle(fontSize: 20, color: Colors.white, backgroundColor: Colors.blue[400]), ),
             onPressed: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Main()));
+                  context, MaterialPageRoute(builder: (context) => MyApp()));
             }),
         TextButton(
-            child: Text("Cadastrar"),
+            child: Text("Cadastrar" , style: TextStyle(fontSize: 20, color: Colors.white, backgroundColor: Colors.blue[400]), ),
             onPressed: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => TelaCad()));
             }),
         TextButton(
-            child: Text("Consultar"),
+           child: Text("Consultar" , style: TextStyle(fontSize: 20, color: Colors.white, backgroundColor: Colors.blue[400]), ),
             onPressed: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => TelaCon()));
