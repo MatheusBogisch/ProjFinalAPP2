@@ -34,37 +34,37 @@ class EstadoTelaCon extends State<TelaCon> {
           Container(
             color: Colors.grey,
             child: Text("Cobertura"),
-            width: 50,
+            width: 60,
           ),
           Container(
             child: Text("Preço"),
             color: Colors.grey,
-            width: 50,
+            width: 40,
           ),
           Container(
             child: Text("Recheio"),
             color: Colors.grey,
-            width: 50,
+            width: 70,
           ),
           Container(
             child: Text("Tamanho"),
             color: Colors.grey,
-            width: 50,
+            width: 70,
           ),
           Container(
             child: Text("Observaçoes"),
             color: Colors.grey,
-            width: 50,
+            width: 90,
           ),
           Container(
             child: Text("Nome do cliente"),
             color: Colors.grey,
-            width: 50,
+            width: 100,
           ),
           Container(
             child: Text("Fone do cliente"),
             color: Colors.grey,
-            width: 50,
+            width: 100,
           ),
           Container(
             child: Text("Imagem"),
