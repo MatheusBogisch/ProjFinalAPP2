@@ -35,7 +35,7 @@ class Campo extends StatelessWidget {
 
 class Menu extends StatelessWidget {
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: [
         Padding(padding: EdgeInsets.all(8)),
         TextButton(
