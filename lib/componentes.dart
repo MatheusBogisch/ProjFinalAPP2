@@ -7,7 +7,8 @@ import 'package:flutter/material.dart';
 class Campo extends StatelessWidget {
   TextEditingController controlador;
   String rotulo;
-  Campo({Key? key, required this.controlador, required this.rotulo})
+  var icone;
+  Campo({Key? key, required this.controlador, required this.rotulo, required})
       : super(key: key);
 
   @override
@@ -15,8 +16,18 @@ class Campo extends StatelessWidget {
     return Padding(
         padding: EdgeInsets.all(8),
         child: TextField(
-          decoration:
-              InputDecoration(labelText: rotulo, border: OutlineInputBorder()),
+          decoration: InputDecoration(
+              labelText: rotulo,
+              labelStyle: TextStyle(color: Colors.white),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.lightBlue.shade300),
+                borderRadius: BorderRadius.all(Radius.circular(30)),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.lightBlue.shade300),
+                borderRadius: BorderRadius.all(Radius.circular(30)),
+              ),
+              prefixIcon: Icon(Icons.cake , color: Colors.white)),
           controller: controlador,
         ));
   }
@@ -26,20 +37,38 @@ class Menu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Padding(padding: EdgeInsets.all(8)),
         TextButton(
-         child: Text("inicio" , style: TextStyle(fontSize: 20, color: Colors.white, backgroundColor: Colors.blue[400]), ),
+            child: Text(
+              "inicio",
+              style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.white),
+            ),
             onPressed: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => MyApp()));
             }),
+               Padding(padding: EdgeInsets.all(8)),
         TextButton(
-            child: Text("Cadastrar" , style: TextStyle(fontSize: 20, color: Colors.white, backgroundColor: Colors.blue[400]), ),
+            child: Text(
+              "Cadastrar",
+              style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.white),
+            ),
             onPressed: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => TelaCad()));
             }),
+               Padding(padding: EdgeInsets.all(8)),
         TextButton(
-           child: Text("Consultar" , style: TextStyle(fontSize: 20, color: Colors.white, backgroundColor: Colors.blue[400]), ),
+            child: Text(
+              "Consultar",
+              style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.white),
+            ),
             onPressed: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => TelaCon()));

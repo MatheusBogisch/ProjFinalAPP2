@@ -18,15 +18,16 @@ class EstadoTelaCad extends State<TelaCad> {
   TextEditingController i = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold( backgroundColor: Colors.pink[400],
       appBar: AppBar(
         title: Text("Cadastrar Pessoa"),
       ),
       drawer: Drawer(
+        backgroundColor: Colors.pink[400] ,
         child: Menu(),
       ),
       body: Center(
-        child: Column(
+        child: ListView(
           children: [
             Campo(controlador: c, rotulo: "Cobertura"),
             Campo(controlador: p, rotulo: "Preço"),
@@ -40,7 +41,8 @@ class EstadoTelaCad extends State<TelaCad> {
               widthFactor: 0.8,
               child: TextButton(
                 onPressed: () {
-                  inserirBanco(c.text, p.text,r.text,t.text,o.text,nC.text,fC.text,i.text);
+                  inserirBanco(c.text, p.text, r.text, t.text, o.text, nC.text,
+                      fC.text, i.text);
                   showSuccessMessage(context, TelaCad());
                 },
                 child: Text(
@@ -48,7 +50,7 @@ class EstadoTelaCad extends State<TelaCad> {
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
                 style: TextButton.styleFrom(
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Colors.blue[400],
                   shadowColor: Colors.black,
                   elevation: 15,
                 ),
